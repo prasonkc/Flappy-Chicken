@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drexqumwmbyby"
+path="res://.godot/imported/rubber-chicken-96436.mp3-1cec511a43408299a75ed101c4e7701a.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX and MUSIC/rubber-chicken-96436.mp3"
+dest_files=["res://.godot/imported/rubber-chicken-96436.mp3-1cec511a43408299a75ed101c4e7701a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

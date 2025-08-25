@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://y1i4drymhc7r"]
+
+[ext_resource type="PackedScene" uid="uid://dfn710gm3dxda" path="res://Scenes/chicken.tscn" id="1_ebmjs"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Chicken" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(176, 184)

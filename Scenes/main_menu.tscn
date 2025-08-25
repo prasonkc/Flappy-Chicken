@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://daeeyvmyfr5ck"]
+
+[ext_resource type="FontFile" uid="uid://cmwik6wni7qcp" path="res://assets/Pixellari.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://b4hyjgjvvf8mw" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_48xlc")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 200.0
+offset_right = 743.0
+offset_bottom = 313.0
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 60
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 363.0
+offset_right = 746.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
