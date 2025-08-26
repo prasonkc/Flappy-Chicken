@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kntk12gajtri"]
+
+[ext_resource type="FontFile" uid="uid://cmwik6wni7qcp" path="res://assets/Pixellari.ttf" id="1_8fo1c"]
+[ext_resource type="Script" uid="uid://b6vh37ewggi4a" path="res://label.gd" id="2_ek8ke"]
+
+[node name="Game Over" type="Node2D"]
+
+[node name="Game Over" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 264.0
+offset_right = 1011.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("1_8fo1c")
+theme_override_font_sizes/font_size = 50
+text = "Game Over. Click Space to restart!"
+script = ExtResource("2_ek8ke")

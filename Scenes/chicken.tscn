@@ -24,24 +24,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h841")
 }],
 "loop": true,
 "name": &"flap",

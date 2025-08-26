@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://0jvcqg60xv3c"]
+
+[ext_resource type="Script" uid="uid://cp7n82gtp1toy" path="res://Scripts/pipes.gd" id="1_qiwso"]
+[ext_resource type="Script" uid="uid://bdqyx4264qi81" path="res://Scripts/pipe_1.gd" id="2_a55u2"]
+[ext_resource type="Texture2D" uid="uid://xkmysxtdu4yw" path="res://assets/hay (1).png" id="3_k8lvw"]
+[ext_resource type="Script" uid="uid://cfnrbtty8ulqo" path="res://Scripts/pipe_2.gd" id="4_k8lvw"]
+[ext_resource type="Texture2D" uid="uid://cgw3xtj7yiofx" path="res://assets/hay (2).png" id="4_ly76y"]
+[ext_resource type="Texture2D" uid="uid://cqc64g3i10b4q" path="res://assets/hay (3).png" id="5_m1m6v"]
+[ext_resource type="Script" uid="uid://bvwkl42sjmfy7" path="res://Scripts/pipe_3.gd" id="6_ly76y"]
+
+[node name="Pipes" type="Node2D"]
+script = ExtResource("1_qiwso")
+
+[node name="pipe1" type="Area2D" parent="."]
+script = ExtResource("2_a55u2")
+
+[node name="hay1" type="Sprite2D" parent="pipe1"]
+position = Vector2(0, -1)
+texture = ExtResource("3_k8lvw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipe1"]
+polygon = PackedVector2Array(-88, -232, 72, -232, 80, 160, 32, 208, -8, 216, -88, 168)
+
+[node name="pipe2" type="Area2D" parent="."]
+script = ExtResource("4_k8lvw")
+
+[node name="hay2" type="Sprite2D" parent="pipe2"]
+position = Vector2(448, -16)
+texture = ExtResource("4_ly76y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipe2"]
+polygon = PackedVector2Array(360, -232, 520, -232, 520, 104, 488, 136, 424, 144, 352, 72)
+
+[node name="pipe3" type="Area2D" parent="."]
+script = ExtResource("6_ly76y")
+
+[node name="hay3" type="Sprite2D" parent="pipe3"]
+position = Vector2(840, -8)
+texture = ExtResource("5_m1m6v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pipe3"]
+polygon = PackedVector2Array(768, -240, 928, -240, 928, 136, 864, 208, 760, 136)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="pipe1" to="." method="_on_pipe_1_body_entered"]
+[connection signal="body_entered" from="pipe2" to="." method="_on_pipe_2_body_entered"]
+[connection signal="body_entered" from="pipe3" to="." method="_on_pipe_3_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
