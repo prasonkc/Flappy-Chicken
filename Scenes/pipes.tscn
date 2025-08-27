@@ -42,8 +42,7 @@ texture = ExtResource("5_m1m6v")
 polygon = PackedVector2Array(768, -240, 928, -240, 928, 136, 864, 208, 760, 136)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
-autostart = true
+wait_time = 3.0
 
 [connection signal="body_entered" from="pipe1" to="." method="_on_pipe_1_body_entered"]
 [connection signal="body_entered" from="pipe2" to="." method="_on_pipe_2_body_entered"]

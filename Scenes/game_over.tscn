@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://kntk12gajtri"]
+[gd_scene load_steps=4 format=3 uid="uid://kntk12gajtri"]
 
 [ext_resource type="FontFile" uid="uid://cmwik6wni7qcp" path="res://assets/Pixellari.ttf" id="1_8fo1c"]
 [ext_resource type="Script" uid="uid://b6vh37ewggi4a" path="res://label.gd" id="2_ek8ke"]
+[ext_resource type="AudioStream" uid="uid://d10u5loyjg7ib" path="res://assets/SFX and MUSIC/gameover.wav" id="3_ek8ke"]
 
 [node name="Game Over" type="Node2D"]
 
@@ -14,3 +15,7 @@ theme_override_fonts/font = ExtResource("1_8fo1c")
 theme_override_font_sizes/font_size = 50
 text = "Game Over. Click Space to restart!"
 script = ExtResource("2_ek8ke")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ek8ke")
+autoplay = true

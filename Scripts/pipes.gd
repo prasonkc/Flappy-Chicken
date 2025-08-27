@@ -1,5 +1,9 @@
 extends Node2D
 
+func _process(delta: float) -> void:
+	if($pipe3.position.x < 600):
+		$Timer.start()
+
 func spawn_pipes():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -8,8 +12,8 @@ func spawn_pipes():
 	var chosen = templates[rng.randi_range(0, 2)]
 
 	var copy = chosen.duplicate()
-	copy.scale.y = rng.randi_range(0, 2)
-	copy.position = Vector2(rng.randi_range(300, 600), 0)
+	copy.scale.y = rng.randi_range(0, 1.5)
+	copy.position = Vector2(600, 0)
 	add_child(copy)
 
 func _on_timer_timeout() -> void:

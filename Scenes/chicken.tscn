@@ -1,7 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfn710gm3dxda"]
+[gd_scene load_steps=12 format=3 uid="uid://dfn710gm3dxda"]
 
 [ext_resource type="Texture2D" uid="uid://bedcgfcb7r1no" path="res://assets/chicken_sprite.png" id="1_245eq"]
 [ext_resource type="Script" uid="uid://ccqjb3rivh01t" path="res://Scripts/chicken.gd" id="1_jy3mo"]
+[ext_resource type="Texture2D" uid="uid://7qq553q4xvbb" path="res://assets/egg_sprite.png" id="2_7h841"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jayuq"]
+atlas = ExtResource("2_7h841")
+region = Rect2(0, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7ecu"]
+atlas = ExtResource("2_7h841")
+region = Rect2(480, 0, 480, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qaoqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jayuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7ecu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xftuy"]
+radius = 34.7826
+height = 69.5652
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy3mo"]
 atlas = ExtResource("1_245eq")
@@ -38,8 +65,20 @@ height = 132.174
 scale = Vector2(0.575, 0.613)
 script = ExtResource("1_jy3mo")
 
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(-10.4348, 19.5759)
+scale = Vector2(0.503623, 0.338363)
+sprite_frames = SubResource("SpriteFrames_qaoqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-12.1739, 14.6819)
+shape = SubResource("CapsuleShape2D_xftuy")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -5.49999)
+position = Vector2(-8.69565, -3.26264)
 rotation = 0.380482
 scale = Vector2(0.575, 0.613)
 sprite_frames = SubResource("SpriteFrames_jayuq")
